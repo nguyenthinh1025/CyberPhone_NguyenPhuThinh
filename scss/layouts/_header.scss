@@ -1,0 +1,81 @@
+.header {
+    position: fixed;
+    width: 100%;
+    background-color: #f5f9fe;
+    box-shadow: 0 2px 4px #e2ebfc;
+    padding: 10px;
+    z-index: 1000;
+    .header__container {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        @include Responsive(MD) {
+            width: 80%;
+        }
+        .header__logo {
+            a {
+                font-size: 2rem;
+                font-weight: 600;
+                color: $primary-main;
+                text-decoration: none;
+                @include Responsive(MD) {
+                    font-size: 1.5rem;
+                }
+            }
+        }
+        .navbar-toggler {
+            color: $primary-gray !important;
+            border: none !important;
+        }
+        .nav-link {
+            color: white !important;
+            transition: all 0.5s ease;
+            font-size: 1.5rem;
+            text-align: center;
+        }
+        .header__nav {
+            .header__nav-list {
+                display: flex;
+                .header__nav-item {
+                    padding: 25px;
+                    a {
+                        font-size: 1rem;
+                        font-weight: 600;
+                        color: $primary-drak;
+                        text-decoration: none;
+                        &::after {
+                            content: "";
+                            display: block;
+                            width: 100%;
+                            height: 2px;
+                            background-color: $primary-main;
+                            transform: scale(0);
+                            transition: all 0.8s ease;
+                        }
+                    }
+                    &:hover {
+                        a {
+                            color: $primary-main;
+                            &::after {
+                                transform: scale(1);
+                            }
+                        }
+                    }
+                }
+                .header__nav-item-active {
+                    a {
+                        color: $primary-main;
+                        &::after {
+                            content: "";
+                            display: block;
+                            width: 100%;
+                            height: 2px;
+                            background-color: #2a73dd;
+                            transform: scale(1);
+                        }
+                    }
+                }
+            }
+        }
+    }
+}

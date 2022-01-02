@@ -1,0 +1,79 @@
+.products {
+    margin-top: 50px;
+    .products__heading {
+        font-size: 2.25rem;
+        font-weight: 700;
+        color: $primary-drak;
+        padding-bottom: 80px;
+        text-align: center;
+    }
+    .row {
+        color: $primary-main;
+        display: flex;
+        flex-wrap: wrap;
+        margin-right: -15px;
+        margin-left: -5px;
+        .card__phone {
+            box-shadow: 6px 6px 12px $primary-shadow, -6px -6px 12px $primary-fff;
+            background-color: $primary-white-f5;
+            border: none;
+            padding: 30px;
+            margin-bottom: 30px;
+            height: 100%;
+            margin: 20px 0;
+            // margin: 0 5px;
+            .product-img {
+                width: 100%;
+                margin: auto;
+                img {
+                    box-shadow: 6px 6px 12px $primary-shadow, -6px -6px 12px $primary-fff;
+                    border-radius: 8px;
+                    width: 100%;
+                }
+            }
+            .product-info {
+                padding: 0 15px;
+                padding-top: 50px;
+                display: flex;
+                justify-content: space-between;
+                .info-left {
+                    h5 {
+                        color: $primary-drak;
+                        font-size: 1.5rem;
+                        font-weight: 700;
+                    }
+                    p {
+                        color: $primary-gray;
+                        padding: 12px 0;
+                    }
+                    .info-icon {
+                        color: $primary-yellow;
+                    }
+                }
+                .info-right {
+                    h5 {
+                        text-align: right;
+                        color: $primary-drak;
+                        font-size: 1.5rem;
+                        font-weight: 700;
+                    }
+                    button {
+                        margin-top: 40px;
+                        background: $primary-white-f5;
+                        padding: 8px 20px;
+                        border: none;
+                        border-radius: 4px;
+                        font-size: 13px;
+                        font-weight: 600;
+                        color: $primary-main;
+                        box-shadow: 2px 2px 4px $primary-shadow, -2px -2px 4px $primary-fff;
+                        transition: all 0.8s ease;
+                        &:hover {
+                            box-shadow: inset 1px 1px 3px $primary-shadow, inset -2px -2px 5px $primary-fff;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}

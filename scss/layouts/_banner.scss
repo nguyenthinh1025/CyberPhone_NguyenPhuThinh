@@ -1,0 +1,66 @@
+.banner {
+    padding: 225px 0;
+    background-image: url(./../../images/product-header-bg.jpg);
+    background-position: center bottom;
+    background-size: cover;
+    background-repeat: no-repeat;
+    height: 100%;
+    .banner__container {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        @include Responsive(MD) {
+            padding-left: 80px;
+        }
+    }
+    .banner__content {
+        .banner__title {
+            font-size: 4.5rem;
+            font-weight: 700;
+            color: $primary-main;
+            margin-bottom: 7px;
+            @include Responsive(MD) {
+                font-size: 3rem;
+            }
+        }
+        .banner__sub-title {
+            font-size: 1.5rem;
+            font-weight: 600;
+            color: $primary-drak;
+            margin-bottom: 3rem;
+        }
+        .banner__descriptions {
+            font-size: 1rem;
+            font-weight: 400;
+            margin-bottom: 25px;
+            line-height: 18px;
+            color: $primary-gray;
+            @include Responsive(MD) {
+                width: 80%;
+            }
+        }
+        .btn-info {
+            transition: all 0.5s ease;
+            &:hover {
+                background-color: $primary-main;
+                color: $primary-fff;
+            }
+        }
+        .btn-shop {
+            transition: all 0.5s ease;
+            &:hover {
+                opacity: 0.75;
+                color: $primary-fff;
+            }
+        }
+    }
+    .banner__image {
+        img {
+            width: 100%;
+            height: auto;
+            @include Responsive(MD) {
+                display: none;
+            }
+        }
+    }
+}
